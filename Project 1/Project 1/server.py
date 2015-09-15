@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import argparse
 import sys
 import socket
@@ -15,13 +16,13 @@ def main():
     parser = argparse.ArgumentParser(description='HTTP Server for ECPE 177')
     parser.add_argument('--version', action='version', version='1.0',
                    help="show program'socketObj version number and quit")
-    parser.add_argument('--bass', metavar = 'BASS_DIR', nargs = 1, default = 'website/html',
+    parser.add_argument('--base', metavar = 'BASS_DIR', nargs = 1, default = 'website/html',
                     help = 'Base dir containing website(defualt: website/html')
     parser.add_argument('--port', metavar='PORT', type=int, nargs = 1, default = 8080,
                    help='Port number to listen on(default:8080)')
     args = parser.parse_args()
 
-    path = args.bass
+    path = args.base
     port = args.port
 #--------------------------
     flag = True
